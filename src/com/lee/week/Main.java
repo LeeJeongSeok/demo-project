@@ -43,23 +43,24 @@ public class Main {
         List<Map<String, String>> list = new ArrayList<>();
         list.add(map1);
         list.add(map2);
-
-
+        
+        
         List<Map<String, String>> list2 = new ArrayList<>();
         list2.add(map4);
         list2.add(map5);
         list2.add(map6);
-
+        
         map1.putAll(map2);
+
+        for (int i = 0; i < 5; i++) {
+            Map<String, String> map = list.get(0);
+            map.putAll(list2.get(0));
+        }
 
 
         System.out.println("List Size : " + list.size());
         System.out.println("List2 Size : " + list2.size());
 
-
-        for (Map<String, String> map : list2) {
-            list.add(map);
-        }
 
 
         System.out.println("list = " + list);
